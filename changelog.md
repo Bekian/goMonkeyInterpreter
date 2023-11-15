@@ -1,4 +1,5 @@
-# Nov 14th, '23, v0.0.2
+# Nov 14th, '23, v0.0.2; bottom of page 22
+
     - Init up to chapter 1.4
     - Added tokens: 
         - ASSIGN       =
@@ -18,3 +19,4 @@
     - Refactored error log in lexer_test to match source cause its not one line and easier to read
     - Refactored two functions in the lexer to be laid out in a way that is more reflective of when they're called in the test
     - Added corresponding the above new token mappings to the lexer
+    
