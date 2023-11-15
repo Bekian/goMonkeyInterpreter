@@ -1,4 +1,6 @@
-# Nov 14th '23, v0.0.2
+
+# Nov 14th, '23, v0.0.2; bottom of page 22
+
     - Init up to chapter 1.4
     - Added tokens: 
         - ASSIGN       =
