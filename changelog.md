@@ -27,3 +27,6 @@
     - Added a more comprehensive test to verify all the current tokens and keywords are funcitoning
     - Added a repl which allows the user to repeatedly enter characters and symbols that will be converted to tokens
     - Added a main.go file which just prints some nice text and runs the repl
+
+## v0.1.1 - bottom of 34
+    - Added beginnings of the ast
