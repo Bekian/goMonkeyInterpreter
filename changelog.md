@@ -30,3 +30,6 @@
 
 ## v0.1.1 - bottom of 34
     - Added beginnings of the ast
+
+# Nov 17th '23, v0.1.2
+    - Added beginnings of the parser (need to finish documenting and maybe reread)
