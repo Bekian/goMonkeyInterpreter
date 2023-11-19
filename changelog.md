@@ -31,5 +31,13 @@
 ## v0.1.1 - bottom of 34
     - Added beginnings of the ast
 
-# Nov 17th '23, v0.1.2
+# Nov 17th '23, v0.1.2 middle of 56
     - Added beginnings of the parser (need to finish documenting and maybe reread)
+    - Added return statements to the parser parseStatement method
+    - Added an initial test to the ast, in (ast_test)
+    - Added support for return statements to the ast
+    - Added support for expression statements to the ast
+    - Added string methods to return string values from the statements 
+    - Added parser errors
+    - Added support for checking for parser errors
+    - Changed parser test to test parser errors
