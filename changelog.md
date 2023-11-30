@@ -47,3 +47,6 @@
     - Added parsing capabilities for Infix expressions
     - Added parsing capabilities for Prefix expressions
     - Added precedence table (order of operations)
+
+# Nov 29th '23 v0.1.4
+    - Fixed infix expression test function
