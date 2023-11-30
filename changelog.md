@@ -50,3 +50,4 @@
 
 # Nov 29th '23 v0.1.4
     - Fixed infix expression test function
+    - Added Boolean representation to the AST
