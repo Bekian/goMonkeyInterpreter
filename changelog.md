@@ -51,3 +51,9 @@
 # Nov 29th '23 v0.1.4
     - Fixed infix expression test function
     - Added Boolean representation to the AST
+
+# 21 jan '24 v0.1.8
+    - Added .gitignore
+    - Added If expression struct to ast, added the implementation to the ast
+    - Added block statement struct to ast, and its implementation to the ast
+    - Added parser tests for the above and boolean expressions (one of these is broken :P )

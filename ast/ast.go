@@ -15,6 +15,11 @@ type Statement interface {
 	statementNode()
 }
 
+type BlockStatement struct {
+	Token token.Token // the left bracket { token
+	Statments []Statement
+}
+
 type Expression interface {
 	Node
 	expressionNode()
@@ -62,11 +67,36 @@ type PrefixExpression struct {
 }
 
 type InfixExpression struct {
-	Token    token.Token // operator token
+	Token    token.Token // operator token; + 
 	Left     Expression
 	Operator string
 	Right    Expression
 }
+
+type IfExpression struct {
+	Token token.Token // if token
+	Condition Expression
+	Consequence *BlockStatement
+	Alternative *BlockStatement
+}
+
+func (ie *IfExpression) expressionNode() {}
+func (ie *IfExpression) TokenLiteral() string { return ie.Token.Literal }
+func (ie *IfExpression) String() string { 
+	var out bytes.Buffer
+
+	out.WriteString("if")
+	out.WriteString(ie.Condition.String())
+	out.WriteString(" ")
+	out.WriteString(ie.Consequence.String())
+
+	if ie.Alternative != nil {
+		out.WriteString("else ")
+		out.WriteString(ie.Alternative.String())
+	}
+
+	return out.String()
+ }
 
 func (p *Program) TokenLiteral() string {
 	if len(p.Statements) > 0 {
@@ -88,6 +118,18 @@ func (p *Program) String() string {
 
 func (ls *LetStatement) statementNode()       {}
 func (ls *LetStatement) TokenLiteral() string { return ls.Token.Literal }
+
+func (bs *BlockStatement) statementNode() {}
+func (bs *BlockStatement) TokenLiteral() string { return bs.Token.Literal }
+func (bs *BlockStatement) String() string { 
+	var out bytes.Buffer
+
+	for _, s := range bs.Statments {
+		out.WriteString(s.String())
+	}
+
+	return out.String()
+}
 
 func (i *Identifier) expressionNode()      {}
 func (i *Identifier) TokenLiteral() string { return i.Token.Literal }
